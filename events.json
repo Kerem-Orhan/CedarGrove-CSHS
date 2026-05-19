@@ -14,10 +14,10 @@
       "date": "2026-05-27",
       "time": "11:00",
       "location": "Computer Lab B",
-      "type": "Election",
+      "type": "other",
       "description": "The election begins."
-    },
-    
+    }
+  ],
   "announcements": [
     {
       "text": "We might be working on a BU Hackathon prompt",
@@ -26,8 +26,7 @@
     {
       "text": "Volunteer tutoring sign-ups now open for AP CS students.",
       "priority": "normal"
-    },
-    
+    }
   ],
   "stats": {
     "members": 6,
