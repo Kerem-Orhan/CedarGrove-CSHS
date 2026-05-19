@@ -2,64 +2,37 @@
   "_comment": "Edit this file to update meetings and events. Date format: YYYY-MM-DD. Time format: 24-hour HH:MM. Type can be: meeting, workshop, competition, social, guest, other.",
   "events": [
     {
-      "title": "General Meeting #5",
-      "date": "2026-05-22",
-      "time": "15:00",
+      "title": "The FIRST Meeting",
+      "date": "2026-05-21",
+      "time": "11:00",
       "location": "Room 204",
       "type": "meeting",
-      "description": "Recap of the semester and elections for next year's officers."
+      "description": "Recap of the semester and overall getting set up for the remainder of the year"
     },
     {
-      "title": "Hour of Code Workshop",
-      "date": "2026-05-28",
-      "time": "15:15",
+      "title": "THE Election",
+      "date": "2026-05-27",
+      "time": "11:00",
       "location": "Computer Lab B",
-      "type": "workshop",
-      "description": "Beginner-friendly intro to Python. Bring a friend who's never coded before."
+      "type": "Election",
+      "description": "The election begins."
     },
-    {
-      "title": "End-of-Year Hackathon",
-      "date": "2026-06-05",
-      "time": "08:00",
-      "location": "Main Auditorium",
-      "type": "competition",
-      "description": "8-hour build-anything hackathon with prizes. Teams of 2-4. Snacks provided."
-    },
-    {
-      "title": "Guest Speaker: AI Engineer",
-      "date": "2026-06-12",
-      "time": "15:00",
-      "location": "Room 204",
-      "type": "guest",
-      "description": "An ML engineer from a local startup will talk about what it's actually like to work in AI."
-    },
-    {
-      "title": "Pizza & Project Showcase",
-      "date": "2026-06-18",
-      "time": "15:30",
-      "location": "Courtyard",
-      "type": "social",
-      "description": "Show off the projects you built this year. Free pizza for all attendees."
-    }
-  ],
+    
   "announcements": [
     {
-      "text": "Applications for next year's officer positions close May 20.",
+      "text": "We might be working on a BU Hackathon prompt",
       "priority": "high"
     },
     {
       "text": "Volunteer tutoring sign-ups now open for AP CS students.",
       "priority": "normal"
     },
-    {
-      "text": "Congrats to our team for placing 3rd in the regional CyberPatriot finals!",
-      "priority": "normal"
-    }
+    
   ],
   "stats": {
-    "members": 47,
-    "meetings_this_year": 18,
-    "projects_built": 23,
+    "members": 6,
+    "meetings_this_year": 5,
+    "projects_built": 5,
     "hours_volunteered": 312
   }
 }
