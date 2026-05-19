@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSHS — Computer Science Honor Society</title>
+  <meta name="description" content="The Computer Science Honor Society — a community of student programmers, builders, and problem solvers.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">&lt;</span>CSHS<span class="logo-bracket">/&gt;</span>
+      <span class="logo-cursor"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="officers.html">officers</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="resources.html">resources</a></li>
+      <li><a href="join.html">join</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse"></span>
+          <span>active chapter · est. 2018</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line-1">we build,</span>
+          <span class="line-2">we learn,</span>
+          <span class="line-1">we ship.</span>
+        </h1>
+        <p class="hero-subtitle">
+          The Computer Science Honor Society is a community of students who love
+          building things with code. Weekly meetings, workshops, hackathons,
+          and a network of people who'll help you figure out what you're doing.
+        </p>
+        <div class="hero-cta">
+          <a href="join.html" class="btn btn-primary">Join the society →</a>
+          <a href="#events" class="btn">View upcoming events</a>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot dot-red"></span>
+          <span class="terminal-dot dot-yellow"></span>
+          <span class="terminal-dot dot-green"></span>
+          <span class="terminal-title">cshs@chapter ~ %</span>
+        </div>
+        <div class="terminal-body">
+          <span class="terminal-line"><span class="prompt">$</span> whoami</span>
+          <span class="terminal-line"><span class="path">computer_science_honor_society</span></span>
+          <span class="terminal-line"><span class="comment">// founded by students, for students</span></span>
+          <span class="terminal-line"><span class="prompt">$</span> ls ./activities</span>
+          <span class="terminal-line"><span class="string">weekly_meetings.md  hackathons.md  workshops.md</span></span>
+          <span class="terminal-line"><span class="string">tutoring.md  guest_speakers.md  competitions.md</span></span>
+          <span class="terminal-line"><span class="prompt">$</span> <span class="keyword">join</span> --new-member <span class="path">_</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <div class="stat-label">Active members</div>
+        <div class="stat-value" data-stat="members">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Meetings this year</div>
+        <div class="stat-value" data-stat="meetings_this_year">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Projects built</div>
+        <div class="stat-value" data-stat="projects_built">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Volunteer hrs</div>
+        <div class="stat-value" data-stat="hours_volunteered">0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS TICKER -->
+  <div class="announcement-bar">
+    <div class="announcement-track" id="announcement-track"></div>
+  </div>
+
+  <!-- EVENTS -->
+  <section class="section events-section" id="events">
+    <div class="events-header">
+      <div>
+        <div class="section-label">/upcoming</div>
+        <h2 class="section-title">Meetings & <span class="accent">events</span></h2>
+      </div>
+      <a href="#" class="btn">Subscribe to calendar</a>
+    </div>
+    <div class="events-list" id="events-list">
+      <div class="empty-state">Loading events…</div>
+    </div>
+  </section>
+
+  <!-- ACTIVITY CHART -->
+  <section class="section">
+    <div class="section-label">/data</div>
+    <h2 class="section-title">Chapter <span class="accent">activity</span> this year</h2>
+
+    <div class="activity-chart">
+      <div class="chart-header">
+        <div class="chart-title">Monthly attendance & workshops</div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background: var(--accent)"></span>Attendees</span>
+          <span><span class="legend-dot" style="background: var(--cyan)"></span>Workshops</span>
+        </div>
+      </div>
+      <div class="bar-chart" id="activity-chart"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="cta-box reveal">
+      <h2 class="cta-title">Ready to <span class="accent">contribute</span>?</h2>
+      <p class="cta-text">
+        Whether you've been coding for years or you just opened your first editor
+        last week — there's a place for you here. We help each other learn, build
+        projects together, and have fun doing it.
+      </p>
+      <a href="join.html" class="btn btn-primary">Become a member →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>CSHS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-tagline">
+        A chapter of the Computer Science Honor Society —
+        a place to build, learn, and find your people.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="officers.html">Officers</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get involved</h4>
+      <ul>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:cshs@yourschool.edu">cshs@yourschool.edu</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CSHS CHAPTER · ALL SYSTEMS NOMINAL</span>
+    <span>BUILT WITH ░░ AND CAFFEINE</span>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

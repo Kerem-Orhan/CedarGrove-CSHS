@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — CSHS</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-bracket">&lt;</span>CSHS<span class="logo-bracket">/&gt;</span>
+      <span class="logo-cursor"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="officers.html">officers</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="resources.html">resources</a></li>
+      <li><a href="join.html">join</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="section-label">/projects</div>
+    <h1 class="hero-title">
+      <span class="line-1">stuff our</span>
+      <span class="line-2">members built.</span>
+    </h1>
+    <p class="hero-subtitle" style="max-width: 640px;">
+      A sample of projects from CSHS members this year — from hackathon hacks
+      thrown together in 8 hours to semester-long passion projects. Many of
+      these started from a "what if we…" at a Tuesday meeting.
+    </p>
+
+    <div class="projects-grid">
+      <div class="project">
+        <div class="project-icon">// HACKATHON · WINNER</div>
+        <h3 class="project-title">StudyStream</h3>
+        <p class="project-desc">
+          A focus-room platform where students can join virtual study sessions,
+          share Pomodoro timers, and unlock streaks for consistent studying.
+          Built in 24 hours.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">WebRTC</span>
+          <span class="project-tag">Firebase</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// SEMESTER PROJECT</div>
+        <h3 class="project-title">ScheduleSolver</h3>
+        <p class="project-desc">
+          A constraint-solver that takes the school's class catalog and finds
+          conflict-free schedules matching student preferences. Used by 60+
+          students during registration.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Z3</span>
+          <span class="project-tag">Flask</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// GAME · GAMEJAM</div>
+        <h3 class="project-title">Recursive Dungeon</h3>
+        <p class="project-desc">
+          A roguelike where every room contains a smaller version of the same
+          dungeon. Procedurally generated, surprisingly playable. Final boss
+          fight is in main().
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Godot</span>
+          <span class="project-tag">GDScript</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// ML · RESEARCH</div>
+        <h3 class="project-title">CafeteriaCam</h3>
+        <p class="project-desc">
+          A computer-vision model that estimates lunch-line wait times from
+          a live webcam feed. Helps students figure out when to leave class
+          early-ish (for hall-pass approved reasons).
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">PyTorch</span>
+          <span class="project-tag">YOLOv8</span>
+          <span class="project-tag">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// HARDWARE · CLUB</div>
+        <h3 class="project-title">Door Sensor Network</h3>
+        <p class="project-desc">
+          ESP32-based sensors on classroom doors that report occupancy to a
+          dashboard. Originally a prank, now actually used by faculty for
+          fire-drill headcounts.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">ESP32</span>
+          <span class="project-tag">MQTT</span>
+          <span class="project-tag">Grafana</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// WEB · TOOL</div>
+        <h3 class="project-title">LaTeX Live</h3>
+        <p class="project-desc">
+          A browser-based LaTeX editor with split-pane preview. Made for
+          students writing physics and math papers without wanting to install
+          a TeX distribution.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">WASM</span>
+          <span class="project-tag">CodeMirror</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// CYBERSEC · CTF</div>
+        <h3 class="project-title">PicoCTF Writeups</h3>
+        <p class="project-desc">
+          Collected solutions and walkthroughs from this year's PicoCTF
+          competition. The team placed in the top 5% nationally.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Binary Analysis</span>
+          <span class="project-tag">Cryptography</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// MOBILE · COMMUNITY</div>
+        <h3 class="project-title">LostFound</h3>
+        <p class="project-desc">
+          A simple iOS/Android app for the school's lost-and-found. Take a
+          photo, tag the location, ML matches it to "looking for" posts. Used
+          mostly for AirPods.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">React Native</span>
+          <span class="project-tag">Supabase</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">// COMP. PROG.</div>
+        <h3 class="project-title">USACO Training Group</h3>
+        <p class="project-desc">
+          Not a project but a programming team — members met weekly to grind
+          USACO and Codeforces problems. Three members made USACO Gold this year.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">C++</span>
+          <span class="project-tag">Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-box">
+      <h2 class="cta-title">Have an idea you want to <span class="accent">build</span>?</h2>
+      <p class="cta-text">
+        Bring it to a meeting. Worst case, nobody else is interested and you
+        learn a lot building it yourself. Best case, you find five people who
+        want to help.
+      </p>
+      <a href="join.html" class="btn btn-primary">Join us →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>CSHS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-tagline">
+        A chapter of the Computer Science Honor Society —
+        a place to build, learn, and find your people.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="officers.html">Officers</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get involved</h4>
+      <ul>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:cshs@yourschool.edu">cshs@yourschool.edu</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CSHS CHAPTER · ALL SYSTEMS NOMINAL</span>
+    <span>BUILT WITH ░░ AND CAFFEINE</span>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
