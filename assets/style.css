@@ -4,36 +4,37 @@
    School colors: gold + black
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;700;800&display=swap');
 
 :root {
-  /* Warm, light, welcoming palette */
-  --bg: #fdfaf3;            /* soft warm ivory */
+  /* Cool, restful neutrals so the warm gold accent actually pops */
+  --bg: #f6f7f9;            /* cool off-white — gives the eye a rest */
   --bg-elevated: #ffffff;   /* clean white cards */
-  --bg-card: #fff6e3;       /* warm cream hover */
-  --bg-warm: #fff4d6;       /* soft gold-tinted panels */
-  --border: #ece4d3;        /* light warm hairline */
-  --border-bright: #ddcfb1; /* slightly stronger hairline */
-  --text: #262015;          /* warm near-black */
-  --text-dim: #5f574a;      /* muted brown-gray body text */
-  --text-muted: #938b78;    /* soft captions */
-  --accent: #a87400;        /* deep readable gold (text + links) */
-  --accent-bright: #ffc72c; /* bright CG gold (fills + decoration) */
-  --accent-dim: #eab21f;
-  --accent-deep: #8a5f00;
-  --accent-soft: #fff1c2;   /* pale gold wash */
-  --accent-glow: rgba(255, 199, 44, 0.45);
-  --cream: #fff5d6;         /* light cream — used inside dark terminal */
-  --magenta: #cf2e69;
-  --cyan: #1c8aa3;
-  --red: #d4533d;
-  --shadow-sm: 0 2px 8px rgba(80, 60, 0, 0.06);
-  --shadow-md: 0 10px 30px rgba(80, 60, 0, 0.09);
-  --shadow-lg: 0 20px 50px rgba(80, 60, 0, 0.13);
-  --radius: 16px;
+  --bg-card: #eef1f5;       /* cool light hover */
+  --bg-panel: #f0f2f5;      /* subtle cool panel (ticker, footer) */
+  --border: #e3e7ec;        /* cool hairline */
+  --border-bright: #d2d8e1; /* stronger hairline */
+  --text: #181c22;          /* cool near-black */
+  --text-dim: #525a66;      /* cool gray body text */
+  --text-muted: #8b93a1;    /* soft captions */
+  --accent: #a06d00;        /* deep gold — readable on cool, for labels/links */
+  --accent-bright: #ffc72c; /* bright CG gold — small accents only */
+  --gold-solid: #c08a0a;    /* primary button — confident, not neon */
+  --accent-dim: #ad7c06;    /* button hover */
+  --accent-deep: #7a5400;
+  --accent-soft: #fbeec2;   /* pale gold wash — used sparingly */
+  --accent-glow: rgba(255, 199, 44, 0.28);
+  --cream: #fff5d6;         /* light cream — dark terminal only */
+  --magenta: #c42a6b;
+  --cyan: #14809c;
+  --red: #cf4d39;
+  --shadow-sm: 0 1px 3px rgba(20, 28, 40, 0.06), 0 2px 8px rgba(20, 28, 40, 0.05);
+  --shadow-md: 0 8px 28px rgba(20, 28, 40, 0.08);
+  --shadow-lg: 0 20px 48px rgba(20, 28, 40, 0.12);
+  --radius: 14px;
   --radius-sm: 10px;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -56,27 +57,13 @@ body {
   position: relative;
 }
 
-/* Faint warm grid — barely-there texture */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(168, 116, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 116, 0, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Soft sunny ambient glow — light & welcoming */
+/* No grid pattern — keep the background calm and restful.
+   A single faint brand glow in one corner adds depth without noise. */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(900px 560px at 82% -8%, rgba(255, 199, 44, 0.20), transparent 70%),
-    radial-gradient(760px 520px at -5% 4%, rgba(255, 199, 44, 0.10), transparent 62%);
+  background: radial-gradient(820px 480px at 90% -12%, rgba(255, 199, 44, 0.10), transparent 68%);
   pointer-events: none;
   z-index: 0;
 }
@@ -98,10 +85,10 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 252, 245, 0.85);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(12px);
-  border-bottom: 2px solid var(--accent-bright);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 0 var(--accent-bright), var(--shadow-sm);
 }
 
 .nav-inner {
@@ -238,7 +225,7 @@ main {
 }
 
 .section-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   line-height: 1.05;
@@ -249,7 +236,6 @@ main {
 
 .section-title .accent {
   color: var(--accent);
-  font-style: italic;
 }
 
 /* ============================================
@@ -262,9 +248,9 @@ main {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 56px;
+  align-items: center;
 }
 
 .hero-content {
@@ -273,18 +259,19 @@ main {
 
 .hero-tag {
   font-size: 11px;
-  color: var(--accent-deep);
-  letter-spacing: 0.3em;
+  color: var(--accent);
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 7px 14px;
-  border: 1px solid #f0d98a;
-  background: var(--accent-soft);
+  border: 1px solid var(--border-bright);
+  background: var(--bg-elevated);
   font-weight: 700;
   border-radius: 999px;
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-tag .pulse {
@@ -302,7 +289,7 @@ main {
 }
 
 .hero-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 900;
   line-height: 0.95;
@@ -314,13 +301,13 @@ main {
 .hero-title .line-2 {
   display: block;
   color: var(--accent);
-  font-style: italic;
 }
 
 .hero-subtitle {
-  font-size: 15px;
+  font-family: var(--sans);
+  font-size: 16px;
   color: var(--text-dim);
-  max-width: 520px;
+  max-width: 500px;
   margin-bottom: 36px;
   line-height: 1.7;
 }
@@ -358,18 +345,18 @@ main {
 }
 
 .btn-primary {
-  background: var(--accent-bright);
-  color: #3a2900;
-  border-color: var(--accent-bright);
-  font-weight: 800;
-  box-shadow: 0 6px 18px var(--accent-glow);
+  background: var(--gold-solid);
+  color: #2a1f02;
+  border-color: var(--gold-solid);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
   background: var(--accent-dim);
-  color: #3a2900;
+  color: #2a1f02;
   transform: translateY(-1px);
-  box-shadow: 0 10px 26px var(--accent-glow);
+  box-shadow: var(--shadow-md);
 }
 
 /* Terminal window in hero — a friendly code window on the light page */
@@ -473,19 +460,21 @@ main {
 }
 
 .stat-value {
-  font-family: var(--serif);
-  font-size: 3rem;
-  font-weight: 900;
+  font-family: var(--mono);
+  font-size: 2.6rem;
+  font-weight: 800;
   color: var(--accent);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-suffix {
   font-family: var(--mono);
-  font-size: 13px;
-  color: var(--text-dim);
-  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
 }
 
 /* ============================================
@@ -534,11 +523,12 @@ main {
 }
 
 .event-day {
-  font-family: var(--serif);
-  font-size: 2.4rem;
-  font-weight: 900;
+  font-family: var(--mono);
+  font-size: 2.2rem;
+  font-weight: 800;
   color: var(--accent);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .event-month {
@@ -577,8 +567,9 @@ main {
 }
 
 .event-description {
-  font-size: 12px;
-  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-dim);
   line-height: 1.6;
 }
 
@@ -608,7 +599,7 @@ main {
    ANNOUNCEMENTS BAR
    ============================================ */
 .announcement-bar {
-  background: var(--bg-warm);
+  background: var(--bg-panel);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 12px 0;
@@ -762,14 +753,15 @@ main {
 }
 
 .about-text p {
-  font-size: 14px;
+  font-family: var(--sans);
+  font-size: 15.5px;
   color: var(--text-dim);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
 .about-text p:first-child::first-letter {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 3.5rem;
   font-weight: 900;
   float: left;
@@ -806,7 +798,7 @@ main {
 }
 
 .value-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
@@ -815,9 +807,10 @@ main {
 }
 
 .value-desc {
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: 14px;
   color: var(--text-dim);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ============================================
@@ -850,7 +843,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 900;
   font-size: 1.5rem;
   color: var(--accent);
@@ -867,7 +860,7 @@ main {
 }
 
 .officer-name {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
@@ -884,8 +877,8 @@ main {
    JOIN / CTA SECTION
    ============================================ */
 .cta-box {
-  background: linear-gradient(135deg, var(--accent-soft), var(--bg-elevated) 65%);
-  border: 1px solid var(--border-bright);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   padding: 48px;
   margin-top: 40px;
   position: relative;
@@ -906,7 +899,7 @@ main {
 }
 
 .cta-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 2.25rem;
   font-weight: 900;
   letter-spacing: -0.03em;
@@ -914,11 +907,12 @@ main {
   color: var(--text);
 }
 
-.cta-title .accent { color: var(--accent); font-style: italic; }
+.cta-title .accent { color: var(--accent); }
 
 .cta-text {
+  font-family: var(--sans);
   color: var(--text-dim);
-  font-size: 14px;
+  font-size: 15.5px;
   margin-bottom: 28px;
   max-width: 580px;
   line-height: 1.7;
@@ -975,7 +969,7 @@ main {
 }
 
 .resource-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -983,9 +977,10 @@ main {
 }
 
 .resource-desc {
+  font-family: var(--sans);
   color: var(--text-dim);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 /* ============================================
@@ -1023,7 +1018,7 @@ main {
 }
 
 .project-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -1036,9 +1031,10 @@ main {
 }
 
 .project-desc {
+  font-family: var(--sans);
   color: var(--text-dim);
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13.5px;
+  line-height: 1.65;
   margin-bottom: 16px;
 }
 
@@ -1064,7 +1060,7 @@ footer {
   margin-top: 80px;
   position: relative;
   z-index: 2;
-  background: var(--bg-warm);
+  background: var(--bg-panel);
 }
 
 .footer-inner {
@@ -1103,7 +1099,8 @@ footer {
 }
 
 .footer-tagline {
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: 13.5px;
   color: var(--text-dim);
   max-width: 320px;
   line-height: 1.7;
